@@ -1,0 +1,45 @@
+$primary-color: #368ac6cc;
+$secondary-color: #444;
+$alpha-primary-color: #368ac6cc;
+$white-color: #181818;
+$black-color: #d5d5d5;
+$background-color: #0f0f0f;
+$error-color: #9a3232;
+$success-color: #2c883a;
+$warning-color: #796729;
+
+$border-radius: 8px;
+$text-white: rgba(
+  $color: $white-color,
+  $alpha: 0.7,
+);
+$text-black: rgba(
+  $color: $black-color,
+  $alpha: 0.7,
+);
+$text-primary: rgba(
+  $color: $primary-color,
+  $alpha: 0.7,
+);
+$text-error: rgba(
+  $color: $error-color,
+  $alpha: 0.7,
+);
+$text-success: rgba(
+  $color: $success-color,
+  $alpha: 0.7,
+);
+$text-warning: rgba(
+  $color: $warning-color,
+  $alpha: 0.7,
+);
+
+$border: 0.5px solid #444;
+$border-dashed: 1px dashed #444;
+$border-black: 0.5px solid #444;
+$border-error: 0.5px solid $error-color;
+$border-success: 0.5px solid $success-color;
+$border-primary: 0.5px solid $primary-color;
+$box-shadow: 0px 0px 0.9310142993927002px 0px rgba(255, 255, 255, 0.17),
+  0px 0px 3.1270833015441895px 0px rgba(255, 255, 255, 0.08),
+  0px 7px 14px 0px rgba(255, 255, 255, 0.05);

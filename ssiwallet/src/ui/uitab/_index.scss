@@ -1,0 +1,41 @@
+.uitab {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: $border;
+  background-color: $white-color;
+
+  &-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+  &-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &--item {
+      padding: 1rem;
+      color: rgba($color: $text-black, $alpha: 0.3);
+      height: max-content;
+      cursor: pointer;
+      &.active {
+        position: relative;
+        color: $primary-color;
+        &::after {
+          content: "";
+          height: 0.3rem;
+          background-color: $primary-color;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0rem;
+          border-top-right-radius: calc($border-radius/2);
+          border-top-left-radius: calc($border-radius/2);
+        }
+      }
+    }
+  }
+}

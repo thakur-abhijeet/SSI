@@ -1,0 +1,56 @@
+.uimodal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($color: $black-color, $alpha: 0.1);
+  }
+  &-content {
+    position: relative;
+    background-color: $white-color;
+    box-shadow: $box-shadow;
+    border: $border;
+
+    animation: 0.5s 0.2s fadeInDown both;
+    transition: all 0.3s ease;
+
+    min-width: 25%;
+    min-height: 10%;
+    max-height: 98%;
+    max-width: 98%;
+
+    border-radius: $border-radius;
+
+    &.hide {
+      animation: 0.5s 0.2s fadeOutUp both !important;
+    }
+
+    &--cross {
+      position: absolute;
+      top: 1rem;
+      right: 1.3rem;
+      color: rgba($color: $black-color, $alpha: 0.7);
+      i {
+        font-size: 2.3rem;
+        cursor: pointer;
+      }
+
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+}

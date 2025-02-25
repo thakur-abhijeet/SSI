@@ -1,0 +1,63 @@
+.btn {
+  outline: none;
+  border: none;
+  height: 3.5rem;
+  color: #ffffff8c;
+
+  border-radius: calc($border-radius / 2);
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+
+  &-plain {
+    background-color: $black-color;
+    color: $primary-color;
+    border: $border;
+  }
+  &-primary {
+    background-color: $primary-color;
+
+    &.duotone {
+      background-color: rgba($color: $primary-color, $alpha: 0.3);
+      color: $primary-color;
+    }
+  }
+  &-error {
+    background-color: $error-color;
+    &.duotone {
+      background-color: rgba($color: $error-color, $alpha: 0.3);
+      color: $error-color;
+    }
+  }
+  &-success {
+    background-color: $success-color;
+
+    &.duotone {
+      background-color: rgba($color: $success-color, $alpha: 0.3);
+      color: $success-color;
+    }
+  }
+  &-warning {
+    background-color: $warning-color;
+
+    &.duotone {
+      background-color: rgba($color: $warning-color, $alpha: 0.3);
+      color: $warning-color;
+    }
+  }
+  &-secondary {
+    background-color: $white-color;
+    color: $text-black;
+    border: $border;
+  }
+
+  &-link {
+    color: $primary-color;
+    text-decoration: underline;
+    height: max-content !important;
+  }
+}

@@ -1,0 +1,211 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  &-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &--left {
+      color: $text-black;
+    }
+    &--right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      gap: 1rem;
+    }
+  }
+  &-content {
+    min-width: 100%;
+    width: max-content;
+    max-height: 80vh;
+    border-collapse: collapse;
+    overflow: visible;
+
+    tfoot {
+      position: sticky;
+      bottom: 0;
+    }
+    thead,
+    tfoot {
+      background-color: $white-color !important;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      tr {
+        border-bottom: $border;
+        th {
+          color: $primary-color;
+          text-align: left;
+          padding: 1.7rem 1rem;
+          border: $border;
+          border-top: none;
+          &:last-child {
+            border-right: none;
+          }
+          &:first-child {
+            border-left: none;
+          }
+
+          &.sticky {
+            position: sticky !important;
+            right: 0 !important;
+            background-color: rgba($color: $white-color, $alpha: 1) !important;
+            border-left: $border !important;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        border-bottom: $border;
+        border-left: 0.5rem solid transparent;
+        border-right: 0.5rem solid transparent;
+        transition: all 0.2s ease-in-out;
+
+        &:last-child {
+          border-bottom: none;
+        }
+        &:last-child td {
+          border-bottom: none;
+        }
+        &:nth-child(2n) {
+          background-color: rgba($color: $black-color, $alpha: 0.02);
+        }
+        &:hover {
+          border-left: 0.5rem solid $primary-color;
+          border-right: 0.5rem solid $primary-color;
+        }
+        &.start {
+          background-color: $white-color !important;
+        }
+        &.highlight {
+          background: linear-gradient(
+            to bottom,
+            transparent 80%,
+            rgba($color: $primary-color, $alpha: 0.2)
+          );
+        }
+        td {
+          padding: 1rem;
+          color: $text-black;
+          border: $border;
+          font-size: 1.4rem;
+
+          &.sticky {
+            position: sticky !important;
+            right: -0.1rem !important;
+            width: max-content;
+            background-color: rgba($color: $white-color, $alpha: 1) !important;
+          }
+
+          &.noresult {
+            height: 50vh;
+            padding: 1rem;
+            text-align: center;
+            color: $text-black;
+            font-style: italic;
+          }
+        }
+      }
+    }
+
+    &--img {
+      img {
+        border-radius: calc($border-radius / 2);
+        overflow: hidden;
+        border: $border;
+        background-color: $white-color;
+        max-width: 4.5rem;
+        max-height: 4.5rem;
+        object-fit: contain;
+      }
+    }
+    &--link {
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+    &--actions {
+      display: flex;
+      justify-content: flex-start;
+      gap: 0.5rem;
+      &__btn {
+        width: 3.5rem;
+      }
+    }
+    &--wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      width: inherit;
+      gap: 0.5rem;
+
+      &.column {
+        flex-direction: column;
+      }
+      &.align-start {
+        align-items: flex-start;
+      }
+    }
+    &--label {
+      background-color: rgba($color: $primary-color, $alpha: 0.2);
+      color: $primary-color;
+      border-radius: calc($border-radius/2);
+      width: max-content;
+      padding: 0.8rem !important;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $text-white;
+      }
+    }
+  }
+  &-pagination {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    align-items: center;
+
+    &--previous,
+    &--next {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.4rem;
+      color: $text-black;
+      cursor: pointer;
+      &:active {
+        opacity: 0.8;
+      }
+      &:hover {
+        color: $primary-color;
+      }
+
+      &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+    &--current {
+      font-size: 1.4rem;
+      background-color: $primary-color;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: calc($border-radius / 1.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $text-white;
+      span {
+        animation: 0.5s 0.2s fadeInUp both;
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.noresult {
+  height: 50vh;
+  padding: 1rem;
+  text-align: center;
+  color: $text-black;
+  font-style: italic;
+}
+
+.framecontainer {
+  display: flex;
+  justify-content: space-between;
+
+  &-content {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.Toastify__toast-container {
+  .Toastify__toast {
+    background-color: $white-color;
+    border: $border;
+    box-shadow: none;
+    color: $text-black;
+  }
+  .Toastify__close-button {
+    color: $text-black;
+  }
+}
+
+//!Jodit
+.jodit {
+  border: $border !important;
+  &-toolbar__box {
+    border-color: transparent !important;
+  }
+
+  &-icon {
+    color: $text-black !important;
+  }
+}
+.jodit-container {
+  background-color: transparent !important;
+
+  &.error {
+    border: $border-error !important;
+  }
+}
+.jodit_theme_light {
+  .jodit-add-new-line {
+    display: none !important;
+  }
+}
+.jodit_theme_dark {
+  .jodit-ui-separator {
+    display: none;
+  }
+  .jodit-toolbar__box {
+    background-color: $white-color;
+  }
+  .jodit-wysiwyg {
+    background-color: $white-color;
+    color: $text-black;
+  }
+  .jodit-add-new-line {
+    display: none !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+  height: 0.8rem !important;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0.5rem !important;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem !important;
+  background: $text-primary;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-color;
+}
+
+.primary-bgcolor {
+  background-color: $primary-color !important;
+}
+.error-bgcolor {
+  background-color: $error-color !important;
+}
+.secondary-bgcolor {
+  background-color: $secondary-color !important;
+}
+.success-bgcolor {
+  background-color: $success-color !important;
+}
+
+.primary-color {
+  color: $primary-color !important;
+}
+.error-color {
+  color: $error-color !important;
+}
+.secondary-color {
+  color: $secondary-color !important;
+}
+.success-color {
+  color: $success-color !important;
+}
+
+.label {
+  font-size: 1.3rem;
+  padding: 0.3rem;
+  border-radius: calc($border-radius / 1.8);
+}
+.primary-label {
+  background-color: rgba($color: $primary-color, $alpha: 0.1);
+  color: $primary-color;
+  border: $border-primary;
+}
+.error-label {
+  background-color: rgba($color: $error-color, $alpha: 0.1);
+  color: $error-color;
+  border: $border-error;
+}
+.success-label {
+  background-color: rgba($color: $success-color, $alpha: 0.1);
+  color: $success-color;
+  border: $border-success;
+}
+.secondary-label {
+  background-color: rgba($color: grey, $alpha: 0.1);
+  color: grey;
+  border: 0.1rem solid grey;
+}
+.extra-label {
+  background-color: rgba($color: $secondary-color, $alpha: 0.05);
+  color: $secondary-color;
+  border: 0.1rem solid $secondary-color;
+}

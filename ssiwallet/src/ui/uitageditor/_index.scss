@@ -1,0 +1,83 @@
+.tageditor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+
+  position: relative;
+
+  &-instruction {
+    color: rgba($color: $text-black, $alpha: 0.5);
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+
+  &-label {
+    color: $text-black;
+    font-size: 1.4rem;
+  }
+
+  &-wrapper:focus-within {
+    border: $border-primary !important;
+  }
+
+  &-wrapper {
+    padding: 0.5rem;
+    min-height: 4rem;
+    border: $border-black !important;
+    border-radius: calc($border-radius / 2);
+    outline: none;
+    background-color: $white-color;
+    color: $text-black;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    &--item {
+      width: max-content;
+      background-color: rgba($color: $primary-color, $alpha: 0.2);
+      color: $primary-color;
+      border-radius: calc($border-radius/2);
+      cursor: pointer;
+      padding: 0.5rem;
+      color: $primary-color;
+      font-size: 1.4rem;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    &::marker {
+      color: $black-color;
+    }
+
+    &.error {
+      border: $border-error !important;
+    }
+
+    input {
+      all: unset;
+      min-width: 30%;
+      font-size: 1.4rem;
+    }
+    input::placeholder {
+      color: rgba($color: $text-black, $alpha: 0.3);
+      font-size: 1.4rem;
+    }
+  }
+
+  &-input {
+    resize: vertical;
+  }
+
+  &-error {
+    font-size: 1.3rem;
+    color: $error-color;
+  }
+}

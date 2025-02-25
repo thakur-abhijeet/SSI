@@ -1,0 +1,76 @@
+.inputfield {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+
+  position: relative;
+
+  &-label {
+    color: $text-black;
+    font-size: 1.4rem;
+  }
+
+  &-input {
+    padding: 0.5rem;
+    border: $border-black;
+    border-radius: calc($border-radius / 2);
+    height: 3.5rem;
+    width: 100%;
+    outline: none;
+    font-size: 1.4rem;
+    background-color: $white-color;
+    color: $text-black;
+
+    &::marker {
+      color: $black-color;
+    }
+    &::placeholder {
+      color: rgba($color: $text-black, $alpha: 0.3);
+    }
+    &:focus {
+      border: $border-primary;
+    }
+    &:disabled {
+      opacity: 0.7;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
+    &[type="date"]::-webkit-calendar-picker-indicator {
+      background-color: $primary-color;
+      border-radius: $border-radius;
+    }
+
+    &.error {
+      border: $border-error;
+    }
+  }
+
+  &-error {
+    font-size: 1.3rem;
+    color: $error-color;
+  }
+
+  &-instruction {
+    color: rgba($color: $text-black, $alpha: 0.5);
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+
+  i {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 1rem;
+    font-size: 1.3rem;
+    color: $text-black;
+    cursor: pointer;
+  }
+}
